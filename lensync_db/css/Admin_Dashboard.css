@@ -1,0 +1,116 @@
+/* General layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background: #222;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background: #444;
+    border-left: 4px solid #2196f3;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    z-index: 1;
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 45px;
+}
+
+.top-menu span.active {
+    text-decoration: underline;
+}
+
+.top-menu a.logout-btn {
+    margin-left: auto;
+    background: #e53935;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-menu a.logout-btn:hover {
+    background: #c62828;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 20px auto;
+    border-collapse: collapse;
+}
+
+#calendar td, #calendar th {
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+    vertical-align:top;
+    height:80px;
+}
+
+.today {
+    background:#ffeb3b;
+}
+
+#nav {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+#nav button {
+    padding:5px 10px;
+    margin:0 10px;
+}
+
+.event {
+    background:#2196f3;
+    color:#fff;
+    font-size:12px;
+    margin-top:5px;
+    padding:2px;
+    border-radius:3px;
+}

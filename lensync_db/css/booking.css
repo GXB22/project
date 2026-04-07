@@ -1,0 +1,259 @@
+/* Modern Booking Requests Layout */
+
+.booking-requests-container {
+    padding: 30px;
+    margin-left: 220px; /* Space for sidebar */
+    margin-top: 60px;   /* Space for topbar */
+    background: #f5f5f5;
+    min-height: calc(100vh - 60px);
+}
+
+.booking-requests-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Booking Cards */
+.booking-request {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.booking-request .details {
+    flex: 2;
+}
+
+.booking-request .details p {
+    margin: 6px 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.booking-request .details strong {
+    color: #333;
+    font-weight: 600;
+    display: inline-block;
+    width: 130px;
+}
+
+/* Receipt Section */
+.receipt-placeholder {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.receipt-placeholder p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.receipt-box {
+    width: 80px;
+    height: 100px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* X pattern for placeholder */
+.receipt-box::before,
+.receipt-box::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background: #ccc;
+}
+
+.receipt-box::before {
+    transform: rotate(45deg);
+}
+
+.receipt-box::after {
+    transform: rotate(-45deg);
+}
+
+.receipt-box:hover {
+    background: #e8e8e8;
+    border-color: #999;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    min-width: 100px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+    text-transform: none;
+}
+
+.actions button.confirm {
+    background: #00c853;
+    color: white;
+}
+
+.actions button.confirm:hover:not(:disabled) {
+    background: #00b248;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,200,83,0.3);
+}
+
+.actions button.delete {
+    background: #9e9e9e;
+    color: white;
+}
+
+.actions button.delete:hover {
+    background: #757575;
+    transform: translateY(-1px);
+}
+
+.actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending { 
+    background: #fff3e0; 
+    color: #e65100; 
+}
+
+.status-confirmed { 
+    background: #e8f5e9; 
+    color: #2e7d32; 
+}
+
+/* Messages */
+.loading {
+    text-align: center;
+    padding: 60px;
+    color: #666;
+    font-size: 16px;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2e7d32;
+}
+
+.no-bookings {
+    text-align: center;
+    color: #666;
+    padding: 60px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Sidebar Styling (if needed) */
+.sidebar {
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 80px;
+    z-index: 100;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+    margin: 5px 10px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #f5f5f5;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Topbar adjustment */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.topbar .logo {
+    color: #333;
+    font-weight: 700;
+}
+
+.top-menu span {
+    color: #666;
+}
+
+.top-menu span.active {
+    color: #333;
+    font-weight: 600;
+}
+
+.logout-btn {
+    background: #e53935 !important;
+}
